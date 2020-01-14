@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,65 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Snapchat_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snapchat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMj-kj-Xi2">
+                                <rect key="frame" x="151" y="20" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oz8-Eg-dA2">
+                                <rect key="frame" x="20" y="49" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOi-BJ-cdh">
+                                <rect key="frame" x="20" y="91" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tF-w1-dvu">
+                                <rect key="frame" x="166.5" y="133" width="42" height="30"/>
+                                <state key="normal" title="Log In"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Krc-Rk-cfn">
+                                <rect key="frame" x="178" y="171" width="19" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGt-EB-ETg">
+                                <rect key="frame" x="126.5" y="200" width="122" height="30"/>
+                                <state key="normal" title="Switch to Sign Up"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Krc-Rk-cfn" firstAttribute="top" secondItem="6tF-w1-dvu" secondAttribute="bottom" constant="8" id="Db0-wx-PH2"/>
+                            <constraint firstItem="iOi-BJ-cdh" firstAttribute="top" secondItem="oz8-Eg-dA2" secondAttribute="bottom" constant="8" id="Ybf-tP-iXP"/>
+                            <constraint firstItem="yGt-EB-ETg" firstAttribute="top" secondItem="Krc-Rk-cfn" secondAttribute="bottom" constant="8" id="Z6q-YG-NEU"/>
+                            <constraint firstItem="iOi-BJ-cdh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ab3-sl-iVJ"/>
+                            <constraint firstItem="GMj-kj-Xi2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bih-Jb-69i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oz8-Eg-dA2" secondAttribute="trailing" constant="20" id="caw-dQ-L67"/>
+                            <constraint firstItem="6tF-w1-dvu" firstAttribute="top" secondItem="iOi-BJ-cdh" secondAttribute="bottom" constant="8" id="dA3-Js-RXm"/>
+                            <constraint firstItem="oz8-Eg-dA2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="emS-0h-cXi"/>
+                            <constraint firstItem="yGt-EB-ETg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="en9-vP-njW"/>
+                            <constraint firstItem="6tF-w1-dvu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h6e-Pe-pEO"/>
+                            <constraint firstItem="Krc-Rk-cfn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hM6-5B-fog"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iOi-BJ-cdh" secondAttribute="trailing" constant="20" id="i93-E3-sXa"/>
+                            <constraint firstItem="GMj-kj-Xi2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="nSG-3l-146"/>
+                            <constraint firstItem="oz8-Eg-dA2" firstAttribute="top" secondItem="GMj-kj-Xi2" secondAttribute="bottom" constant="8" id="vRj-P8-Xv7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="127"/>
         </scene>
     </scenes>
 </document>
